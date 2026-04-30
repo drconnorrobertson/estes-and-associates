@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+Disallow: /client-center/
+Disallow: /private/
+Disallow: /admin/
+Disallow: /*.json$
+
+# Sitemaps
+Sitemap: https://esteestax.com/sitemap.xml
+
+# Crawl delay
+Crawl-delay: 1
