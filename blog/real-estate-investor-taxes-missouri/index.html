@@ -50,10 +50,53 @@
                         <li><a href="/blog/">Blog</a></li>
                         <li><a href="/contact/">Contact</a></li>
                     </ul>
+                    <div class="hamburger" id="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
                 </div>
             </div>
         </nav>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobileMenu">
+            <div class="mobile-menu-content">
+                <div class="mobile-phone-number">
+                    <a href="tel:(573) 761-4100" style="color: inherit; text-decoration: none;">(573) 761-4100</a>
+                </div>
+                <ul>
+                    <li><a href="/" class="mobile-nav-link">Home</a></li>
+                    <li><a href="/about/" class="mobile-nav-link">About</a></li>
+                    <li><a href="/services/" class="mobile-nav-link">Services</a></li>
+                    <li><a href="/locations/" class="mobile-nav-link">Locations</a></li>
+                    <li><a href="/blog/" class="mobile-nav-link">Blog</a></li>
+                    <li><a href="/contact/" class="mobile-nav-link">Contact</a></li>
+                </ul>
+                <div class="mobile-menu-cta">
+                    <a href="/contact/" class="btn">Schedule Consultation</a>
+                </div>
+            </div>
+        </div>
     </header>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+        hamburger.addEventListener('click', function() {
+            hamburger.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+        });
+
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                hamburger.classList.remove('active');
+                mobileMenu.classList.remove('active');
+            });
+        });
+    </script>
 
     <section class="page-header">
         <div class="container">
